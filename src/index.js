@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Header from './common/header/Header';
+import Home from './screens/home/Home';
+import {GridList1} from './screens/home/Home';
 ReactDOM.render(
   <div>
-    <Header/>
+    <Home/>
+    <GridList1/>
   </div>,
   document.getElementById('root')
 );
