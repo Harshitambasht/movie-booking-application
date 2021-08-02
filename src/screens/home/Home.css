@@ -20,21 +20,20 @@ li {
   display: flex;
   margin: 16px;
 }
-#image:hover{
-  cursor: pointer;
-}
 .left{
   width: 76%;
 }
 .right{
   width: 24%;
 }
-.title{
-  font-size:  14px !important;
-  color: blue !important;
+.button{
+  
+  display: grid;
+  padding: 15px;
+ 
 }
-.select{
-  padding-right: 9em !important;
+#formcontrol{
+  display: flex !important;
 }
 
 
