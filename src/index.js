@@ -1,21 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Home, { Left, OutlinedCard } from './screens/home/Home';
-import {GridList1} from './screens/home/Home';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Details from "./common/Details/Details";
+import Home from "./screens/Home/Home"
+
 ReactDOM.render(
-  <div>
-    <Home/>
-    <GridList1/>
-    <div className="flex-container">
-      <div className="left">
-    <Left/>
-    </div>
-    <div className="right">
-    <OutlinedCard/>
-    </div>
-    </div>
-  </div>,
+  <BrowserRouter>
+    
+      <Route exact path="/" component={Home} />
+      <Route path="/details/:id" component={Details} />
+      
+  </BrowserRouter>
+  ,
   document.getElementById('root')
 );
 

@@ -1,20 +1,9 @@
-heading {
+.heading {
   background-color: #ff9999;
   padding: 8px;
   display: flex;
   justify-content: center;
   font-size: 1rem;
-}
-.movie {
-  overflow-y: hidden;
-  overflow-x: hidden;
-}
-.MuiGridList-root {
-  flex-wrap: nowrap !important;
-}
-
-li {
-  width: unset !important;
 }
 .flex-container{
   display: flex;
@@ -25,15 +14,6 @@ li {
 }
 .right{
   width: 24%;
-}
-.button{
-  
-  display: grid;
-  padding: 15px;
- 
-}
-#formcontrol{
-  display: flex !important;
 }
 
 
