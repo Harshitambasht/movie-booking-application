@@ -23,7 +23,9 @@ const useStyles = makeStyles(() => ({
       height: 450,
     },
   }));
+
 function Home() {
+  
   const [filteredMovies, setFilteredMovies] = useState(moviesData);
   const [moviename, setMovieName] = React.useState("");
   const [genre, setGenre] = React.useState([]);

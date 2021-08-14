@@ -24,7 +24,7 @@ function Details() {
                     left: "80.5%",
                     top: "8.4px",
                 }}>
-                    <Link to="/bookshow"><Button variant="contained" color="primary" >BOOK SHOW</Button></Link>
+                    <Link to="/bookshow" style={{ textDecoration: "none" }}><Button variant="contained" color="primary" >BOOK SHOW</Button></Link>
                 </div>
             </div>
             <div className="btn">

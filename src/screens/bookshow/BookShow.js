@@ -33,10 +33,12 @@ const BookShow = (props) => {
   const [originalShows, setOriginalShows] = useState([]);
   const [showId, setShowId] = useState("");
 
+
+
   useEffect(() => {
     let dataShows = null;
 
-    fetch(props.baseUrl + "movies/" + props.match.params.id + "/shows", {
+    fetch(props.baseUrl + "details/" + props.match.params.id + "/bookshow", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
