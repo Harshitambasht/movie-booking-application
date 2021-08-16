@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { findMovieByid } from '../moviesData';
+import { findMovieByid } from './../../common/moviesData';
 import Typography from '@material-ui/core/Typography';
 import moment from 'moment';
 import Link from '@material-ui/core/Link';

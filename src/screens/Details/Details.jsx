@@ -1,4 +1,3 @@
-import './../../common/Header/Header.css';
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import './Details.css';
@@ -9,7 +8,8 @@ import Middle from './Middle';
 import Right from './Right';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import Grid from '@material-ui/core/Grid';
-import Header from '../Header/Header';
+import Header from '../../common/Header/Header';
+
 
 
 

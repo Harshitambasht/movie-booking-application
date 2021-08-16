@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import logo from './../logo.svg';
 import Button from '@material-ui/core/Button';
 import Modal from 'react-modal';
-import { FormControl, Tab, Tabs, TextField } from '@material-ui/core';
+import FormControl from "@material-ui/core/FormControl";
+import { Tab, Tabs, TextField } from '@material-ui/core';
 import SwipeableViews from 'react-swipeable-views';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
@@ -88,8 +89,8 @@ export default function Header() {
   const [state, setState] = useState(false);
 
   const onButtonClickHandler = () => {
-    setState({showMessage: true});
-   };
+    setState({ showMessage: true });
+  };
   return (
     <div className="header">
       <img src={logo} className="svg" alt="logo" />
@@ -120,68 +121,70 @@ export default function Header() {
           <div style={{ display: "flex", justifyContent: "center" }}>
             <TabPanel value={value} index={0} dir={theme.direction}>
               <FormControl noValidate autoComplete="off">
-                <div style={{ padding: 10 }}>
-                  <TextField id="standard-basic" label="Username*" />
-                </div>
-                <div style={{ padding: 10, paddingBottom: 50 }}>
-                  <TextField id="standard-basic" label="Password*" />
-                </div>
+
+                <TextField id="standard-basic" label="Username" required/>
+                <br />
+
+                <TextField id="standard-basic" label="Password" required/>
+                <br />
                 <div style={{ display: "flex", justifyContent: "center" }}>
-                  <Button variant="contained" color="primary">
+                  <Button variant="contained" color="primary" onClick={changeState}>
                     Login
                   </Button></div>
               </FormControl>
             </TabPanel>
           </div>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <TabPanel value={value} index={1} dir={theme.direction}>
-              <FormControl noValidate autoComplete="off">
-                <ValidatorForm >
-                  <div style={{ padding: 10 }}>
-                    <TextValidator
-                      label="First Name*"
-                      type="text"
-                      validators={['required']}
-                      errorMessages={['required']}
-                    /></div>
-                  <div style={{ padding: 10 }}>
-                    <TextValidator
-                      label="Last Name*"
-                      type="text"
-                      validators={['required']}
-                      errorMessages={['required']}
-                    /></div>
-                  <div style={{ padding: 10 }}>
-                    <TextValidator
-                      label="Email*"
-                      type="email"
-                      validators={['required', "isEmail"]}
-                      errorMessages={['required']}
-                    /></div>
-                  <div style={{ padding: 10 }}>
-                    <TextValidator
-                      label="Password*"
-                      type="password"
-                      validators={['required']}
-                      errorMessages={['required']}
-                    /></div>
-                  <div style={{ padding: 10 }}>
-                    <TextValidator
-                      label="Contact No.*"
-                      type="number"
-                      validators={['required', 'minNumber:10']}
-                      errorMessages={['required', "Minimum number length is 3"]}
-                    /></div>
-                    {state.showMessage && <p>Registration Successful. Please Login!</p>}
-                  <div style={{ display: "flex", justifyContent: "center" , marginTop: 20}}>
+            <TabPanel value={value} index={1} dir={theme.direction} >
 
-                    <Button type="submit" variant="contained" color="primary" onClick={onButtonClickHandler} >
-                      Register
-                    </Button>
-                  </div>
-                </ValidatorForm>
+              <ValidatorForm >
 
-              </FormControl>
+                <TextValidator
+                required
+                  label="First Name"
+                  type="text"
+                  validators={["required"]}
+                  errorMessages={["required"]}
+                /><br />
+                <TextValidator
+                required
+                  label="Last Name"
+                  type="text"
+                  validators={["required"]}
+                  errorMessages={['required']}
+                /><br />
+                <TextValidator
+                required
+                  label="Email"
+                  type="email"
+                  validators={['required', "isEmail"]}
+                  errorMessages={['required']}
+                /><br />
+                <TextValidator
+                required
+                  label="Password"
+                  type="password"
+                  validators={['required']}
+                  errorMessages={['required']}
+                /><br />
+                <TextValidator
+                required
+                  label="Contact No."
+                  type="number"
+                  validators={['required']}
+                  errorMessages={['required']}
+                /><br/>
+                <br />
+                {state.showMessage && <p>Registration Successful. Please Login!</p>}
+                <div style={{ display: "flex", justifyContent: "center" }}>
+
+                  <Button type="submit" variant="contained" color="primary" onClick={onButtonClickHandler} >
+                    Register
+                  </Button>
+                </div>
+              </ValidatorForm>
+
+
             </TabPanel>
           </div>
         </SwipeableViews>

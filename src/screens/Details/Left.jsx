@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { findMovieByid } from './../moviesData';
+import { findMovieByid } from './../../common/moviesData';
 
 export default function Left() {
     const id = useParams().id;

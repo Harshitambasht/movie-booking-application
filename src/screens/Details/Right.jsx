@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import ImageListItemBar from '@material-ui/core/ImageListItemBar';
 import ImageList from '@material-ui/core/ImageList';
 import { useParams } from 'react-router-dom';
-import { findMovieByid } from './../moviesData';
+import { findMovieByid } from './../../common/moviesData';
 import Rating from "@material-ui/lab/Rating";
 
 const useStyles = makeStyles(() => ({
