@@ -12,8 +12,8 @@ ReactDOM.render(
    
       <Route exact path="/" component={Home} />
       <Route path="/details/:id" component={Details} />
-      <Route path="/bookshow" component={BookShow} />
-      <Route path="/confirm/" component={Confirmation} />
+      <Route path="/bookshow/:id" component={BookShow} />
+      <Route path="/confirm/:id" component={Confirmation} />
       
       
   </BrowserRouter>

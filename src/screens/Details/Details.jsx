@@ -1,8 +1,7 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
 import './Details.css';
 import Typography from '@material-ui/core/Typography';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Left from './Left';
 import Middle from './Middle';
 import Right from './Right';
@@ -10,22 +9,12 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import Grid from '@material-ui/core/Grid';
 import Header from '../../common/Header/Header';
 
-
-
-
-function Details() {
-
+function Details(props) {
+   
     return (
         <div>
             <div>
-                <Header />
-                <div style={{
-                    position: "absolute",
-                    left: "80.5%",
-                    top: "8.4px",
-                }}>
-                    <Link to="/bookshow" style={{ textDecoration: "none" }}><Button variant="contained" color="primary" >BOOK SHOW</Button></Link>
-                </div>
+                <Header id={props.match.params.id} baseUrl={props.baseUrl} showBookShowButton="true"/>
             </div>
             <div className="btn">
                 <NavLink to="/" activeStyle={{ textDecoration: "none", color: "black", }}>
